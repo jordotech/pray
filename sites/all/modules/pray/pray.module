@@ -1,0 +1,9 @@
+<?php
+
+function pray_form_alter(&$form, &$form_state, $form_id){
+    $form['#submit'][] = 'prayer_form_submit_handler';
+}
+
+function prayer_form_submit_handler(&$form, &$form_state){
+    drupal_goto('node/15');
+}

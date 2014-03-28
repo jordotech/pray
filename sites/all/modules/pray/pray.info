@@ -1,0 +1,4 @@
+name = Prayer Request
+description = Custom module for prayer requests
+core = 7.x
+package = Prayer
