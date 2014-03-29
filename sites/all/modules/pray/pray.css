@@ -1,0 +1,14 @@
+#prayer-links-container{
+    border:1px solid red;
+    height:20px;
+    overflow: hidden;
+    width:960px;
+
+}
+#links-hider{
+    width:10000px;
+    position:relative;
+    border:1px solid green;
+    height:20px;
+
+}

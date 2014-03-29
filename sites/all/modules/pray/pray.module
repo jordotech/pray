@@ -7,3 +7,40 @@ function pray_form_alter(&$form, &$form_state, $form_id){
 function prayer_form_submit_handler(&$form, &$form_state){
     drupal_goto('node/15');
 }
+
+function prayer_scroller(){
+    $req = prayer_return_nids(10);
+    foreach($req as $nid){
+        $node = node_load($nid);
+        $title = $trimmed_title = views_trim_text(array('max_length' => 35, 'word_boundary' => true, 'ellipsis' => '...'), $node->title);
+        $link = l($title, 'node/' . $node->nid);
+        $links[] = $link;
+    }
+    $link_str = '<div id="prayer-links-container"><div id="links-hider">' . implode(' | ', $links) . '</div></div>';
+    return $link_str;
+}
+
+/*
+ * @param $limit
+ *   The number of posts to return
+ */
+
+function prayer_return_nids($limit) {
+    $nids = array();
+    $query = db_select('node', 'n');
+    $query->condition('n.status', 1);
+    $query->condition('n.type', 'peticion')
+        ->orderBy('created', 'DESC')
+        ->fields('n', array('nid'))
+        ->range(0, $limit);
+    $result = $query->execute();
+    foreach ($result as $key => $value) {
+        $nids[] = $value->nid;
+    }
+    return $nids;
+}
+
+function pray_init(){
+    drupal_add_js(drupal_get_path('module', 'pray') . '/pray.js');
+    drupal_add_css(drupal_get_path('module', 'pray') . '/pray.css');
+}
