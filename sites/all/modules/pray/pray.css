@@ -1,14 +1,49 @@
 #prayer-links-container{
-    border:1px solid red;
-    height:20px;
+    xheight:20px;
     overflow: hidden;
-    width:960px;
+    width:1170px;
 
 }
-#links-hider{
-    width:10000px;
+#links-underneath{
+    width:3900px;
     position:relative;
-    border:1px solid green;
     height:20px;
-
+    font-size:20px;
+}
+.scroller-prayer-link{
+    width:390px;
+    xbackground: cadetblue;
+    float:left;
+    overflow:hidden;
+}
+.navbar-default{
+    background-color: #ffffff;
+    background-image: -moz-linear-gradient(top, #bfc3ef 0%, #ffffff 100%);
+    background-image: -ms-linear-gradient(top, #bfc3ef 0%, #ffffff 100%);
+    background-image: -o-linear-gradient(top, #bfc3ef 0%, #ffffff 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #bfc3ef), color-stop(1, #ffffff));
+    background-image: -webkit-linear-gradient(top, #bfc3ef 0%, #ffffff 100%);
+    background-image: linear-gradient(top, #bfc3ef 0%, #ffffff 100%);
+}
+.scroller-ellipses{
+    background: orange;
+}
+#prayer-scroller{
+    border-radius: 4px;
+    border-color: #ddd #ddd #ddd #ddd;
+    -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,.05);
+    -moz-box-shadow: -1px 1px 1px rgba(0,0,0,.05);
+    box-shadow: 1px 1px 1px rgba(0,0,0,.05);
+    padding: 0px 10px;
+    overflow: hidden;
+    width: 1170px;
+    border: 1px solid #ddd;
+    margin-bottom:10px;
+}
+.col-sm-9 {
+    width: 64% !important;
+}
+.col-sm-3{
+    width:36% !important;
+    min-width: 420px !important;
 }

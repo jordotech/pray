@@ -554,9 +554,9 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
 
 $databases['default']['default'] = array(
 'driver' => 'mysql',
-'database' => 'jordotech_pray',
-'username' => 'jordotech_pray',
-'password' => 'vANxU1kY',
+'database' => 'pray',
+'username' => 'root',
+'password' => 'root',
 'host' => 'localhost',
 );
 $conf['file_temporary_path'] = 'sites/default/files/tmp';

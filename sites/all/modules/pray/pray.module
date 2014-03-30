@@ -12,11 +12,11 @@ function prayer_scroller(){
     $req = prayer_return_nids(10);
     foreach($req as $nid){
         $node = node_load($nid);
-        $title = $trimmed_title = views_trim_text(array('max_length' => 35, 'word_boundary' => true, 'ellipsis' => '...'), $node->title);
-        $link = l($title, 'node/' . $node->nid);
-        $links[] = $link;
+        $title = $trimmed_title = views_trim_text(array('max_length' => 35, 'word_boundary' => false, 'ellipsis' => '....'), $node->title);
+        $link = l(strtolower($title), 'node/' . $node->nid, array('html' => true));
+        $links[] = '<div class="scroller-prayer-link">' . $link . '   </div>';
     }
-    $link_str = '<div id="prayer-links-container"><div id="links-hider">' . implode(' | ', $links) . '</div></div>';
+    $link_str = '<div id="prayer-scroller"><h7>Peticiónes Nuevas:</h4><div id="prayer-links-container"><div id="links-underneath">' . implode('', $links) . '</div></div></div>';
     return $link_str;
 }
 
