@@ -28,6 +28,9 @@
 .scroller-ellipses{
     background: orange;
 }
+h1.navbar-brand a{
+    font-size:30px;
+}
 #prayer-scroller{
     border-radius: 4px;
     border-color: #ddd #ddd #ddd #ddd;
@@ -46,4 +49,14 @@
 .col-sm-3{
     width:36% !important;
     min-width: 420px !important;
+}
+.footer.container{
+    background-color: #ffffff;
+    width:100%;
+    background-image: -moz-linear-gradient(bottom, #bfc3ef 0%, #ffffff 100%);
+    background-image: -ms-linear-gradient(bottom, #bfc3ef 0%, #ffffff 100%);
+    background-image: -o-linear-gradient(bottom, #bfc3ef 0%, #ffffff 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #bfc3ef), color-stop(1, #ffffff));
+    background-image: -webkit-linear-gradient(bottom, #bfc3ef 0%, #ffffff 100%);
+    background-image: linear-gradient(bottom, #bfc3ef 0%, #ffffff 100%);
 }
